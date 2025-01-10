@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#e0e0e0,#f0f0f0);
+}
+.calculator{
+    background: #f0f0f0;
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+}
+.display{
+    background: #f0f0f0;
+    height: 90px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    box-shadow: inset 10px 10px 20px #bebebe,inset -10px -10px 20px #ffffff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: none;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.btn{
+    user-select: none;
+    background: #f0f0f0;
+    height: 70px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    box-shadow: 10px 10px 20px #bebebe,-10px -10px 20px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn:active{
+    box-shadow: inset 10px 10px 20px #bebebe,inset -10px -10px 20px #ffffff;
+    transform: scale(0.95);
+}
+.operator{
+    color: #ff5757;
+}
+.equal{
+    background: linear-gradient(145deg,#ff5757,#ff8787);
+    color: white;
+    font-weight: bold;
+    box-shadow:  10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+.equal:active{
+    box-shadow: inset 10px 10px 20px #bebebe,inset -10px -10px 20px #ffffff;
+}
+.zero{
+    grid-column:span 2 ;
+}
+.clear{
+    color: #ffad33;
+    font-weight: bold;
+}
+.delete{
+    color: #ff5757;
+    font-weight: bold;
+}
+@media screen and (max-width:768px){
+    .display{
+        font-size: 2rem;
+    }
+    .btn{
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
