@@ -18,6 +18,10 @@ buttons.forEach(function(btn){
     }
   })
 })
+// دکمه ی حذف کامل
 AC.addEventListener('click',function(){
   display.innerHTML='0';
+})
+DEL.addEventListener('click',function(){
+ 
 })
