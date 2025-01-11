@@ -18,3 +18,6 @@ buttons.forEach(function(btn){
     }
   })
 })
+AC.addEventListener('click',function(){
+  display.innerHTML='0';
+})
