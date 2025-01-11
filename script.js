@@ -1,7 +1,8 @@
 let display=document.querySelector('#display'); //دسترسی به قسمت نمایشگر 
 let buttons=document.querySelectorAll('.btn');  //دسترسی به تک تک دکمه ها
 let AC=document.querySelector('.clear');
-
+let operator=document.querySelectorAll('.operator');
+let currentOperator=null;
 
 buttons.forEach(function(e){ // انتخاب تک تک دکمه ها
     e.addEventListener('click',function(e){ // عملیات کلیک روی دکمه ها
@@ -19,4 +20,10 @@ buttons.forEach(function(e){ // انتخاب تک تک دکمه ها
 
 AC.addEventListener('click',function(){
   display.innerHTML='0';
+})
+operator.forEach(function(e){
+  e.addEventListener('click',function(e){
+   currentOperator=e.target.dataset.action;
+   
+  })
 })
