@@ -1,7 +1,7 @@
 let display=document.querySelector('#display'); //دسترسی به قسمت نمایشگر 
 let buttons=document.querySelectorAll('.btn');  //دسترسی به تک تک دکمه ها
 let AC=document.querySelector('.clear');
-let del=document.querySelector('.delete');
+
 
 buttons.forEach(function(e){ // انتخاب تک تک دکمه ها
     e.addEventListener('click',function(e){ // عملیات کلیک روی دکمه ها
