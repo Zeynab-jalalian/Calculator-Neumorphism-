@@ -52,7 +52,7 @@ else if(action=== "÷" || action=== "×"){
     }
   }
   else{
-    display.innerHTML+=value;
+    display.innerHTML+=action;
    }
   
   });
