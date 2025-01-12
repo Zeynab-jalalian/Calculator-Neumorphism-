@@ -36,7 +36,18 @@ buttons.forEach(function(button){
   }else if(action==="÷"){
     display.innerHTML+="÷";
   }
-
+// اگر این دکمه زده شد همه چی صفر شه
+  else if(action==="clear"){
+    display.innerHTML="0";
+  }
+// دکمه ی DEL
+  else if(action==="delete"){
+    if(display.innerHTML.length>1){
+      display.innerHTML=display.innerHTML.slice(0,-1);
+    }else{
+      display.innerHTML="0";
+    }
+  }
   }
   })
 })
