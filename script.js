@@ -35,4 +35,11 @@ DEL.addEventListener('click',function(){
   display.innerHTML="0";
  }
 })
-
+//عملیات ریاضی و مساوی
+equal.addEventListener('click',function(){
+  try{
+    display.innerHTML=eval(display.innerHTML);
+  }catch(error){
+    display.innerHTML='Error';
+  }
+})
