@@ -12,11 +12,22 @@ buttons.forEach(function(button){
     // عملگرهای ریاضی - دکمه های حذف - مساوی
     const value=e.target.innerText; //دکمه هایی که اکشن ندارند هم محسوب میشوند
     if(!action){ //اگر اعداد و نقطه بود
-     if(display.innerHTML==="0"){
+     if(display.innerHTML==="0"){ //اگر نمایشگر 0 بود جایگزین شود
       display.innerHTML=value;
-     }else{
+     }else{ //اگر نه در ادامه نوشته شود
       display.innerHTML+=value;
      }
     }
+
+    else if(action==='='){
+      try{
+     let exp=display.innerHTML
+     .replace(/×/g , '*')
+     .replace(/÷/g , '/');
+     display.innerHTML=eval(exp);
+    }catch(error){
+      display.innerHTML='Error';
+    }
+  }
   })
 })
