@@ -5,6 +5,7 @@ let AC=document.querySelector('.clear');
 let DEL=document.querySelector('.delete');
 let equal=document.querySelector('.equal');
 let operator=document.querySelectorAll('.operator');
+
 /*
 انتخاب تک تک دکمه ها
 عملیات کلیک
