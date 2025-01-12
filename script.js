@@ -10,6 +10,6 @@ buttons.forEach(function(button){
     //انتخاب تمام دکمه ها و عملیات کلیک
     const action=e.target.dataset.action; //دکمه هایی که دیتا اکشن دارند
     // عملگرهای ریاضی - دکمه های حذف - مساوی
-    
+    const value=e.target.innerText; //دکمه هایی که اکشن ندارند هم محسوب میشوند
   })
 })
