@@ -48,6 +48,7 @@ buttons.forEach(function(button){
       display.innerHTML="0";
     }
   }
+
   }
   })
 })
