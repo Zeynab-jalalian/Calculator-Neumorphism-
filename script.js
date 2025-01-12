@@ -18,16 +18,25 @@ buttons.forEach(function(button){
       display.innerHTML+=value;
      }
     }
-
+//اگر مساوی بود...
     else if(action==='='){
       try{
      let exp=display.innerHTML
-     .replace(/×/g , '*')
-     .replace(/÷/g , '/');
-     display.innerHTML=eval(exp);
+     .replace(/×/g , '*') //تبدیل به *
+     .replace(/÷/g , '/'); // تبدیل به /
+     display.innerHTML=eval(exp); //محاسبه
     }catch(error){
-      display.innerHTML='Error';
+      display.innerHTML='Error'; //در صورت خطا Error
     }
+  }
+// نمایش ÷×
+  else if(action==="×" || action==="÷"){
+  if(action==="×"){
+    display.innerHTML+="×";
+  }else if(action==="÷"){
+    display.innerHTML+="÷";
+  }
+
   }
   })
 })
