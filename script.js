@@ -35,3 +35,4 @@ DEL.addEventListener('click',function(){
   display.innerHTML="0";
  }
 })
+
