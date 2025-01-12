@@ -1,9 +1,11 @@
+
 // دسترسی به نمایشگر و دکمه ها
 let display=document.querySelector('#display');
 let buttons=document.querySelectorAll('.btn');
 let AC=document.querySelector('.clear');
 let DEL=document.querySelector('.delete');
 let equal=document.querySelector('.equal');
+
 // حلقه برای تمام دکمه ها 
 buttons.forEach(function(button){
   button.addEventListener('click',function(e){
@@ -30,7 +32,7 @@ buttons.forEach(function(button){
     }
   }
 // نمایش ÷×
-  else if(action==="×" || action==="÷"){
+  else if(action=== "×" || action=== "÷"){
   if(action==="×"){
     display.innerHTML+="×";
   }else if(action==="÷"){
@@ -48,7 +50,6 @@ buttons.forEach(function(button){
       display.innerHTML="0";
     }
   }
-
   }
   })
 })
