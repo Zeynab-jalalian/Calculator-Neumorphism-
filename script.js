@@ -7,8 +7,8 @@ let DEL=document.querySelector('.delete');
 let equal=document.querySelector('.equal');
 
 // حلقه برای تمام دکمه ها 
-buttons.forEach(function(button){
-  button.addEventListener('click',function(e){
+buttons.forEach(function(btn){
+  btn.addEventListener('click',function(e){
     //انتخاب تمام دکمه ها و عملیات کلیک
     const action=e.target.dataset.action; //دکمه هایی که دیتا اکشن دارند
     // عملگرهای ریاضی - دکمه های حذف - مساوی
@@ -32,12 +32,13 @@ buttons.forEach(function(button){
     }
   }
 // نمایش ÷×
-  else if(action=== "×" || action=== "÷"){
-  if(action==="×"){
-    display.innerHTML+="×";
-  }else if(action==="÷"){
+else if(action=== "÷" || action=== "×"){
+  if(action==="÷"){
     display.innerHTML+="÷";
+  }else if(action==="×"){
+    display.innerHTML+="×";
   }
+}
 // اگر این دکمه زده شد همه چی صفر شه
   else if(action==="clear"){
     display.innerHTML="0";
@@ -50,6 +51,9 @@ buttons.forEach(function(button){
       display.innerHTML="0";
     }
   }
-  }
-  })
-})
+  else{
+    display.innerHTML+=value;
+   }
+  
+  });
+});
