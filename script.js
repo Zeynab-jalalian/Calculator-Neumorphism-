@@ -11,5 +11,12 @@ buttons.forEach(function(button){
     const action=e.target.dataset.action; //دکمه هایی که دیتا اکشن دارند
     // عملگرهای ریاضی - دکمه های حذف - مساوی
     const value=e.target.innerText; //دکمه هایی که اکشن ندارند هم محسوب میشوند
+    if(!action){ //اگر اعداد و نقطه بود
+     if(display.innerHTML==="0"){
+      display.innerHTML=value;
+     }else{
+      display.innerHTML+=value;
+     }
+    }
   })
 })
